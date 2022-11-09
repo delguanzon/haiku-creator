@@ -25,6 +25,8 @@ describe('Haiku', () => {
 
   test("should return if it's a haiku or not", () => {
     expect(haiku.isHaiku()).toEqual(true);
+    let haiku2 = new Haiku("I run, rerun\nFall, get back up, and then I\ndrink from water cup");
+    expect(haiku2.isHaiku()).toEqual(false);
   });
 
 });
