@@ -8,9 +8,16 @@ export default class Haiku {
   }
 
   getSyllables(line) {
-    let vowels = ["a","e","i","o","u"];
     let regex = new RegExp(/[aeiou]/gi);
     const count = line.match(regex).length;
     return count;
+  }
+
+  isHaiku() {
+    if (this.getSyllables(this.line1) === 5 && this.getSyllables(this.line2) === 7 && this.getSyllables(this.line3) === 5){
+      return true;
+    }else {
+      return false;
+    }
   }
 }
