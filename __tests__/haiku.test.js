@@ -17,4 +17,10 @@ describe('Haiku', () => {
     expect(haiku.line3).toEqual("A poppy blooms");
   });
 
+  test('should return the number of syllables in a line', () => {
+    expect(haiku.getSyllables(this.line1)).toEqual(5);
+    expect(haiku.getSyllables(this.line2)).toEqual(7);
+    expect(haiku.getSyllables(this.line3)).toEqual(5);
+  });
+
 });
