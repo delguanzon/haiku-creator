@@ -12,6 +12,5 @@ export default class Haiku {
     let regex = new RegExp(/[aeiou]/gi);
     const count = line.match(regex).length;
     return count;
-   
   }
 }

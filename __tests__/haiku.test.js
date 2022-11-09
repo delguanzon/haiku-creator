@@ -23,4 +23,8 @@ describe('Haiku', () => {
     expect(haiku.getSyllables(haiku.line3)).toEqual(5);
   });
 
+  test("should return if it's a haiku or not", () => {
+    expect(haiku.isHaiku()).toEqual(true);
+  });
+
 });
