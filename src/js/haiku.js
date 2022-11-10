@@ -28,18 +28,11 @@ export default class Haiku {
   return syllableCount;
   }
 
-
-  // if(line.word ===5){
-  //   return true;
-  // } else {
-  //   return false;
-  // }
-  // ++;
-  // isHaiku() {
-  //   if (this.getSyllables(this.line1) === 5 && this.getSyllables(this.line2) === 7 && this.getSyllables(this.line3) === 5){
-  //     return true;
-  //   }else {
-  //     return false;
-  //   }
-  // }
+  isHaiku() {
+    if (this.getLineSyllables(this.line1) === 5 && this.getLineSyllables(this.line2) === 7 && this.getLineSyllables(this.line3) === 5){
+      return true;
+    }else {
+      return false;
+    }
+  }
 }
