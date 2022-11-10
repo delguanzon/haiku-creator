@@ -18,6 +18,7 @@ export default class Haiku {
     }
   }
 
+  getLineSyllables()
   // isHaiku() {
   //   if (this.getSyllables(this.line1) === 5 && this.getSyllables(this.line2) === 7 && this.getSyllables(this.line3) === 5){
   //     return true;

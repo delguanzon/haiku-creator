@@ -37,6 +37,9 @@ describe('Haiku', () => {
     expect(haiku.getSyllables("yeet")).toEqual(1);
   });
   
+  test('should return all syllables counted in a line', () => {
+    expect(haiku.getLineSyllables("I run, fall, rerun")).toEqual(5);
+  });
 
 //   test('should count two consecutive vowels as one vowel', () => {
 //     let haiku3 = new Haiku("I run, fall, between\nFall, get back up, and then I\ndrink from water cup");
