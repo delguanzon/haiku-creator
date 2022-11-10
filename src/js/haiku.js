@@ -43,9 +43,88 @@ export default class Haiku {
   }
 
   generateNew() {
-    let randomWords = randomWord(3);
-    //console.log(randomWords);
-    console.log("randomWords join: ", randomWords.join(""));
-    return randomWords.length;
+    let word= randomWord(1);
+    let newLine1 = word.toString();
+    let newEntry = "";
+    console.log("New Line 1: " + newLine1);
+    
+    
+    for(let i=0; i <= 5; i++) {      
+      if(this.getLineSyllables(newLine1) <= 3){
+        let newLine2 = newLine1.concat(" ",randomWord(1).toString());
+        console.log("New Line 2: " + newLine2);
+        newLine1 = newLine2;
+      }
+      else if(this.getLineSyllables(newLine1) === 4){
+        let rand = "testing";
+        console.log(" 4syllables: " + newLine1);
+        do {
+          rand = randomWord(1);
+          console.log(rand);
+        } while(this.getSyllables(rand.toString()) != 1);
+
+        let newLine2 = newLine1.concat(" ", rand);
+        newLine1 = newLine2;
+        console.log("New Line 4: " + newLine2);
+      }
+      else{
+        break;
+      }
+    }
+    newEntry = newLine1;
+    newLine1 = "";
+
+    for(let i=0; i <= 7; i++) {      
+      if(this.getLineSyllables(newLine1) <= 5){
+        let newLine2 = newLine1.concat(" ",randomWord(1).toString());
+        console.log("New Line 2: " + newLine2);
+        newLine1 = newLine2;
+      }
+      else if(this.getLineSyllables(newLine1) === 6){
+        let rand = "testing";
+        console.log(" 4syllables: " + newLine1);
+        do {
+          rand = randomWord(1);
+          console.log(rand);
+        } while(this.getSyllables(rand.toString()) != 1);
+
+        let newLine2 = newLine1.concat(" ", rand);
+        newLine1 = newLine2;
+        console.log("New Line 4: " + newLine2);
+      }
+      
+      else{
+        break;
+      }
+    }
+    newEntry = newEntry + "\n" + newLine1;
+    newLine1 = "";
+
+    for(let i=0; i <= 5; i++) {      
+      if(this.getLineSyllables(newLine1) <= 3){
+        let newLine2 = newLine1.concat(" ",randomWord(1).toString());
+        console.log("New Line 2: " + newLine2);
+        newLine1 = newLine2;
+      }
+      else if(this.getLineSyllables(newLine1) === 4){
+        let rand = "testing";
+        console.log(" 4syllables: " + newLine1);
+        do {
+          rand = randomWord(1);
+          console.log(rand);
+        } while(this.getSyllables(rand.toString()) != 1);
+
+        let newLine2 = newLine1.concat(" ", rand);
+        newLine1 = newLine2;
+        console.log("New Line 4: " + newLine2);
+      }
+      else{
+        break;
+      }
+    }
+    newEntry = newEntry + "\n" + newLine1;
+    console.log("This is the new Entry: \n" + newEntry);
+    //console.log("randomWords join: ", randomWords.join(""));
+    return newLine1;
   }
 }
