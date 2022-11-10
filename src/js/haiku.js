@@ -1,10 +1,14 @@
 export default class Haiku {
   
-  constructor(entry) {
+  constructor() {
+    this.entry = [];
+    this.line1 = "";
+    this.line2 = "";
+    this.line3 = "";
+  }
+
+  setEntry(entry) {
     this.entry = entry;
-    this.line1 = entry.split('\n')[0];
-    this.line2 = entry.split('\n')[1];
-    this.line3 = entry.split('\n')[2];
   }
   
   getSyllables(word) {
