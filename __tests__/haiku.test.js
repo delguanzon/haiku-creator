@@ -21,21 +21,20 @@ describe('Haiku', () => {
     expect(haiku.getSyllables('yes')).toEqual(1);
   });
 
-  test('should return the number of syllables in a word', () => {
-
-    expect(haiku.getSyllables(haiku.line1)).toEqual(5);
-  });
+  // test('should return the number of syllables in a word', () => {
+  //   expect(haiku.getSyllables(haiku.line1)).toEqual(5);
+  // });
 
   
 
-  test('should count two consecutive vowels as one vowel', () => {
-    let haiku3 = new Haiku("I run, fall, between\nFall, get back up, and then I\ndrink from water cup");
-    expect(haiku3.getSyllables(haiku3.line1)).toEqual(5);
-  })
+//   test('should count two consecutive vowels as one vowel', () => {
+//     let haiku3 = new Haiku("I run, fall, between\nFall, get back up, and then I\ndrink from water cup");
+//     expect(haiku3.getSyllables(haiku3.line1)).toEqual(5);
+//   })
 
-  test("should return if it's a haiku or not", () => {
-    expect(haiku.isHaiku()).toEqual(true);
-    let haiku2 = new Haiku("I run, fall\nFall, get back up, and then I\ndrink from water cup");
-    expect(haiku2.isHaiku()).toEqual(false);
-  });
-});
+//   test("should return if it's a haiku or not", () => {
+//     expect(haiku.isHaiku()).toEqual(true);
+//     let haiku2 = new Haiku("I run, fall\nFall, get back up, and then I\ndrink from water cup");
+//     expect(haiku2.isHaiku()).toEqual(false);
+//   });
+ });
