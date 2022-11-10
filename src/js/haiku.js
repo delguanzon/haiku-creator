@@ -8,8 +8,11 @@ export default class Haiku {
   }
 
   getSyllables(line) {
-    let regex = new RegExp(/[aeiou]/gi);
-    const count = line.match(regex).length;
+    let regex = new RegExp(/[aeiouy]/gi);
+    let regex2 = new RegExp(/[aeiouy]{2}/gi);
+    //regex = regex - regex2;
+    const count = line.match(regex).length - line.match(regex2);
+  
     return count;
   }
 
