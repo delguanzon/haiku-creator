@@ -18,7 +18,23 @@ export default class Haiku {
     }
   }
 
-  getLineSyllables()
+  getLineSyllables(line) {  
+   let syllableCount = 0;
+   //let lineArr = Array.from(line);
+   let lineArr = line.split(" ");
+   lineArr.forEach(element => {
+    syllableCount += this.getSyllables(element);
+    });
+  return syllableCount;
+  }
+
+
+  // if(line.word ===5){
+  //   return true;
+  // } else {
+  //   return false;
+  // }
+  // ++;
   // isHaiku() {
   //   if (this.getSyllables(this.line1) === 5 && this.getSyllables(this.line2) === 7 && this.getSyllables(this.line3) === 5){
   //     return true;
