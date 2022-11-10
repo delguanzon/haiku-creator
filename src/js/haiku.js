@@ -1,4 +1,4 @@
-var randomWords = require('random-words');
+var randomWord = require('random-words');
 export default class Haiku {
   
 
@@ -43,6 +43,9 @@ export default class Haiku {
   }
 
   generateNew() {
-    return randomWords(3).length;
+    let randomWords = randomWord(3);
+    //console.log(randomWords);
+    console.log("randomWords join: ", randomWords.join(""));
+    return randomWords.length;
   }
 }

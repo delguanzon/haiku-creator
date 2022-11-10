@@ -1,2 +1,5 @@
 import Haiku from './../src/js/haiku.js';
-var randomWords = require('random-words');
+
+let haiku = new Haiku();
+haiku.setEntry('I run, fall, rerun\nFall, get back up, and then I\ndrink from water cup');
+haiku.generateNew();

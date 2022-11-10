@@ -62,4 +62,11 @@ describe('Haiku', () => {
     let haiku = new Haiku();
     expect(haiku.generateNew()).toEqual(3);
   }); 
+
+  test('should generate words until a line is 5 syllables', () => {
+    haiku.generateNew();
+    expect(haiku.getLineSyllables()).toEqual(5);    
+  });
+
+
 });
