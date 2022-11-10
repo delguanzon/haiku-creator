@@ -14,6 +14,7 @@ describe('Haiku', () => {
   });
 
   test('should separate our haiku.entry into three lines', () => {
+    divideEntry(haiku.entry);
     expect(haiku.line1).toEqual("I run, fall, rerun");
     expect(haiku.line2).toEqual("Fall, get back up, and then I");
     expect(haiku.line3).toEqual("drink from water cup");
