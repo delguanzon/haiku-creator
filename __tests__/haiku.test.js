@@ -41,14 +41,13 @@ describe('Haiku', () => {
     expect(haiku.getLineSyllables("I run, fall, rerun")).toEqual(5);
   });
 
-//   test('should count two consecutive vowels as one vowel', () => {
-//     let haiku3 = new Haiku("I run, fall, between\nFall, get back up, and then I\ndrink from water cup");
-//     expect(haiku3.getSyllables(haiku3.line1)).toEqual(5);
-//   })
+  test("should return true if it's a haiku", () => {
+    expect(haiku.isHaiku()).toEqual(true);
+  });
 
-//   test("should return if it's a haiku or not", () => {
-//     expect(haiku.isHaiku()).toEqual(true);
-//     let haiku2 = new Haiku("I run, fall\nFall, get back up, and then I\ndrink from water cup");
-//     expect(haiku2.isHaiku()).toEqual(false);
-//   });
+  test("should return false if it's not a haiku", () => {
+    let haiku2 = new Haiku("I run, fall\nFall, get back up, and then I\ndrink from water cup");
+    expect(haiku2.isHaiku()).toEqual(false);
+  });
+
 });
