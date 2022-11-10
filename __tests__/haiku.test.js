@@ -6,10 +6,10 @@ describe('Haiku', () => {
   
   beforeEach(() => {
     haiku = new Haiku();
+    haiku.setEntry('I run, fall, rerun\nFall, get back up, and then I\ndrink from water cup');
   });
 
   test('should set the entry property for the haiku object', () => {
-    haiku.setEntry('I run, fall, rerun\nFall, get back up, and then I\ndrink from water cup')
     expect(haiku.entry).toEqual("I run, fall, rerun\nFall, get back up, and then I\ndrink from water cup");
   });
 
@@ -48,12 +48,13 @@ describe('Haiku', () => {
   });
 
   test("should return false if it's not a haiku", () => {
-    let haiku2 = new Haiku("I run, fall\nFall, get back up, and then I\ndrink from water cup");
+    let haiku2 = new Haiku();
+    haiku2.setEntry('I run, fall, run\nFall, get back up, and then I\ndrink from water cup');
     expect(haiku2.isHaiku()).toEqual(false);
   });
 
-  test('should return a random word', () => {
+  test('should return 1 for generating a random word', () => {
     let haiku = new Haiku();
-    expect(haiku.generateHaiku()).toEqual(1);
+    expect(haiku.generateNew()).toEqual(1);
   });  
 });

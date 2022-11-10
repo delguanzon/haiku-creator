@@ -1,5 +1,7 @@
+var randomWords = require('random-words');
 export default class Haiku {
   
+
   constructor() {
     this.entry = [];    
   }
@@ -41,6 +43,6 @@ export default class Haiku {
   }
 
   generateNew() {
-
+    return randomWords(1).length;
   }
 }
