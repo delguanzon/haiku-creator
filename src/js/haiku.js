@@ -12,7 +12,7 @@ export default class Haiku {
       return 1;
     }
     else {
-      return word.match(/[aeiouy]/g).length;
+      return word.match(/[aeiouy]{1,2}/g).length;
     }
   }
 
