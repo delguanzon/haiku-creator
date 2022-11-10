@@ -28,6 +28,10 @@ describe('Haiku', () => {
   test('should return the number of syllables, counting sequential vowels as a syllable', () => {
     expect(haiku.getSyllables('meat')).toEqual(1);
   });
+
+  test('should remove es and ed from the end of a word and return the number of syllables', () => {
+    expect(haiku.getSyllables("wanted")).toEqual(1);
+  });
   
 
 //   test('should count two consecutive vowels as one vowel', () => {
