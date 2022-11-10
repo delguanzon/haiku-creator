@@ -25,6 +25,9 @@ describe('Haiku', () => {
     expect(haiku.getSyllables('body')).toEqual(2);
   });
 
+  test('should return the number of syllables, counting sequential vowels as a syllable', () => {
+    expect(haiku.getSyllables('meat')).toEqual(1);
+  });
   
 
 //   test('should count two consecutive vowels as one vowel', () => {
@@ -37,4 +40,4 @@ describe('Haiku', () => {
 //     let haiku2 = new Haiku("I run, fall\nFall, get back up, and then I\ndrink from water cup");
 //     expect(haiku2.isHaiku()).toEqual(false);
 //   });
- });
+});
