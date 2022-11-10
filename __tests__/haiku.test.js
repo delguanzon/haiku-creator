@@ -5,14 +5,15 @@ describe('Haiku', () => {
   let haiku;
   
   beforeEach(() => {
-    haiku = new Haiku("I run, fall, rerun\nFall, get back up, and then I\ndrink from water cup");
+    haiku = new Haiku();
   });
 
-  test('should create correctly a haiku object',() => {
+  test('should set the entry property for the haiku object', () => {
+    haiku.setEntry('I run, fall, rerun\nFall, get back up, and then I\ndrink from water cup')
     expect(haiku.entry).toEqual("I run, fall, rerun\nFall, get back up, and then I\ndrink from water cup");
-  }); 
+  });
 
-  test('should separate our haiku object into three lines', () => {
+  test('should separate our haiku.entry into three lines', () => {
     expect(haiku.line1).toEqual("I run, fall, rerun");
     expect(haiku.line2).toEqual("Fall, get back up, and then I");
     expect(haiku.line3).toEqual("drink from water cup");
@@ -54,6 +55,5 @@ describe('Haiku', () => {
   test('should return a random word', () => {
     let haiku = new Haiku();
     expect(haiku.generateHaiku()).toEqual(1);
-  });
-  
+  });  
 });

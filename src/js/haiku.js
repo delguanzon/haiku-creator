@@ -6,7 +6,7 @@ export default class Haiku {
     this.line2 = entry.split('\n')[1];
     this.line3 = entry.split('\n')[2];
   }
-
+  
   getSyllables(word) {
     if(word.length <=3) {
       return 1;
@@ -34,5 +34,9 @@ export default class Haiku {
     }else {
       return false;
     }
+  }
+
+  generateNew() {
+
   }
 }
