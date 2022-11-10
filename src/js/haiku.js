@@ -43,6 +43,6 @@ export default class Haiku {
   }
 
   generateNew() {
-    return randomWords(1).length;
+    return randomWords(3).length;
   }
 }

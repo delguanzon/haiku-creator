@@ -53,8 +53,13 @@ describe('Haiku', () => {
     expect(haiku2.isHaiku()).toEqual(false);
   });
 
-  test('should return 1 for generating a random word', () => {
+  // test('should return 1 for generating a random word', () => {
+  //   let haiku = new Haiku();
+  //   expect(haiku.generateNew()).toEqual(1);
+  // });  
+  
+  test('should return a string of 3 random words', () => {
     let haiku = new Haiku();
-    expect(haiku.generateNew()).toEqual(1);
-  });  
+    expect(haiku.generateNew()).toEqual(3);
+  }); 
 });
