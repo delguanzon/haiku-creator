@@ -11,6 +11,9 @@ export default class Haiku {
     if(word.length <=3) {
       return 1;
     }
+    else {
+      return word.match(/[aeiouy]/g).length;
+    }
   }
 
   // isHaiku() {
