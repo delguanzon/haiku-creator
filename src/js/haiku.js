@@ -13,6 +13,7 @@ export default class Haiku {
     }
     else {
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
+      word = word.replace(/^y/, '');
       return word.match(/[aeiouy]{1,2}/g).length;
     }
   }
