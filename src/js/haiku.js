@@ -97,6 +97,7 @@ export default class Haiku {
         break;
       }
     }
+    
     newEntry = newEntry + "\n" + newLine1;
     newLine1 = "";
 
