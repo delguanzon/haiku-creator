@@ -17,13 +17,13 @@ describe('Haiku', () => {
     expect(haiku.line3).toEqual("drink from water cup");
   });
 
-  test('should return 1 if the word is 3 letters or less', () => {
+  test('should return 1 syllable if the word is 3 letters or less', () => {
     expect(haiku.getSyllables('yes')).toEqual(1);
   });
 
-  // test('should return the number of syllables in a word', () => {
-  //   expect(haiku.getSyllables(haiku.line1)).toEqual(5);
-  // });
+  test('should return the number of syllables for a word with 4 letters or more', () => {
+    expect(haiku.getSyllables('body')).toEqual(2);
+  });
 
   
 
