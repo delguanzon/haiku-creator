@@ -19,13 +19,13 @@ export default class Haiku {
   }
 
   getLineSyllables(line) {  
-   let syllableCount = 0;
-   //let lineArr = Array.from(line);
-   let lineArr = line.split(" ");
-   lineArr.forEach(element => {
-    syllableCount += this.getSyllables(element);
+    let syllableCount = 0;
+    //let lineArr = Array.from(line);
+    let lineArr = line.split(" ");
+    lineArr.forEach(element => {
+      syllableCount += this.getSyllables(element);
     });
-  return syllableCount;
+    return syllableCount;
   }
 
   isHaiku() {

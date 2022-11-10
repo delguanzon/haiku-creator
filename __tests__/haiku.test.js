@@ -1,4 +1,5 @@
 import Haiku from './../src/js/haiku.js';
+var randomWords = require('random-words');
 
 describe('Haiku', () => {
   let haiku;
@@ -50,4 +51,9 @@ describe('Haiku', () => {
     expect(haiku2.isHaiku()).toEqual(false);
   });
 
+  test('should return a random word', () => {
+    let haiku = new Haiku();
+    expect(haiku.generateHaiku()).toEqual(1);
+  });
+  
 });
