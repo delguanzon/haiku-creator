@@ -67,6 +67,4 @@ describe('Haiku', () => {
     haiku.generateNew();
     expect(haiku.getLineSyllables()).toEqual(5);    
   });
-
-
 });
